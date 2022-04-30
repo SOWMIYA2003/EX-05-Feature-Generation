@@ -146,12 +146,13 @@ Categorical-Column Encoding Methods : Methods to convert categorical data to num
 ![op](./5m.png)
 
 ### Feature Scaling  Techniques:
-
+Feature scaling is a method used to normalize the range of independent variables or features of data. In data processing, it is also known as data normalization and is generally performed during the data preprocessing step.
+```
 1.Min-Max Scaler.
 2.Standard Scaler.
 3.Max Abs Scaler.
 4.Robust Scaler.
-
+```
 
 ### Feature Scaling - Min-Max Scaler Technique:
 ![op](./5n.png)
