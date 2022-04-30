@@ -52,7 +52,7 @@ Maximum absolute scaling scales the data to its maximum value; that is, it divid
 One approach to standardizing input variables in the presence of outliers is to ignore the outliers from the calculation of the mean and standard deviation, then use the calculated values to scale the variable. This is called robust standardization or robust data scaling.
 Scale features using statistics that are robust to outliers. 
 This Scaler removes the median and scales the data according to the quantile range (defaults to IQR: Interquartile Range). The IQR is the range between the 1st quartile (25th quantile) and the 3rd quartile (75th quantile).
-
+# Data 1 - data.csv
 ## CODE
 ```
 import pandas as pd
