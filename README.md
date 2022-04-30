@@ -18,7 +18,22 @@ Apply Feature Generation techniques to all the feature of the data set.
 ### STEP 4
 Save the data to the file.
 
-## Feture Scaling Techniques:
+
+
+## Feature Generation Process and Feature Scaling Techniques:
+
+### Ordinal Encoding
+
+In ordinal encoding, each unique category value is assigned an integer value. For example, “red” is 1, “green” is 2, and “blue” is 3. This is called an ordinal encoding or an integer encoding and is easily reversible. Often, integer values starting at zero are used.
+
+### Binary Encoding
+
+Initially categories are encoded as Integer and then converted into binary code, then the digits from that binary string are placed into separate columns. for eg: for 7 : 1 1 1. This method is quite preferable when there are more number of categories.
+
+### One Hot Encoding
+
+One Hot Encoding is a common way of preprocessing categorical features for machine learning models. This type of encoding creates a new binary feature for each possible category and assigns a value of 1 to the feature of each sample that corresponds to its original category.
+
 ### Min-Max Scaler
 
 In machine learning, MinMaxscaler is a scaling algorithms for continuous variables. The MinMaxscaler is a type of scaler that scales the minimum and maximum values to be 0 and 1 respectively.
@@ -33,6 +48,7 @@ In machine learning, StandardScaler is a scaling algorithms for continuous varia
 Maximum absolute scaling scales the data to its maximum value; that is, it divides every observation by the maximum value of the variable: The result of the preceding transformation is a distribution in which the values vary approximately within the range of -1 to 1.
 
 ### Robust Scaler
+
 One approach to standardizing input variables in the presence of outliers is to ignore the outliers from the calculation of the mean and standard deviation, then use the calculated values to scale the variable. This is called robust standardization or robust data scaling.
 Scale features using statistics that are robust to outliers. 
 This Scaler removes the median and scales the data according to the quantile range (defaults to IQR: Interquartile Range). The IQR is the range between the 1st quartile (25th quantile) and the 3rd quartile (75th quantile).
@@ -113,7 +129,7 @@ df9
 ### DataFrame (data.csv):
 ![op](./5a.png)
 
-### Feature Generation:
+### Feature Generation Process:
 
 Categorical-Column Encoding Methods : Methods to convert categorical data to numeric data.
 ```
@@ -121,28 +137,28 @@ Categorical-Column Encoding Methods : Methods to convert categorical data to num
 2.Binary Encoder.
 3.One Hot Encoder.
 ```
-### Applying OrdinalEncoder in column- Ord_1:
+### Applying Ordinal Encoding in column- Ord_1:
 ![op](./5b.png)
 ![op](./5c.png)
-### After applying OrdinalEncoder in column- Ord_1:
+### After applying Ordinal Encoding in column- Ord_1:
 ![op](./5d.png)
-### Applying OrdinalEncoder in column- Ord_2:
+### Applying Ordinal Encoding in column- Ord_2:
 ![op](./5e.png)
 ![op](./5f.png)
-### After applying OrdinalEncoder in column- Ord_2:
+### After applying Ordinal Encoding in column- Ord_2:
 ![op](./5g.png)
-### Applying BinaryEncoder in column- bin_1:
+### Applying Binary Encoding in column- bin_1:
 ![op](./5h.png)
-### After applying BinaryEncoder in column- bin_1:
+### After applying Binary Encoding in column- bin_1:
 ![op](./5i.png)
-### Applying BinaryEncoder in column- bin_2:
+### Applying Binary Encoding in column- bin_2:
 ![op](./5j.png)
-### After applying BinaryEncoder in column- bin_2:
+### After applying Binary Encoding in column- bin_2:
 ![op](./5k.png)
-### One Hot Encoder:
+### One Hot Encoding:
 ![op](./5l.png)
 ![op](./5mm.png)
-### Final DataSet after applying feature generation:
+### Final DataSet after applying Encoding Methods:
 ![op](./5m.png)
 
 ### Feature Scaling  Techniques:
