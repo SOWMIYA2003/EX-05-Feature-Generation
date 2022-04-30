@@ -179,5 +179,10 @@ Feature scaling is a method used to normalize the range of independent variables
 ### Feature Scaling - Robust Scaler Technique:
 ![op](./5q.png)
 
+# Data 2 - Encoding Data.csv
+## CODE
+```
+```
+## OUTPUT
 ## RESULT:
 Feature Generation process and Feature Scaling process is applied to the given data frame sucessfully.
