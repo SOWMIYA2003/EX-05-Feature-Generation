@@ -112,15 +112,15 @@ df9
 ## OUPUT
 ### DataFrame (data.csv):
 ![op](./5a.png)
-```
-Feature Generation:
+
+### Feature Generation:
 
 Categorical-Column Encoding Methods : Methods to convert categorical data to numeric data.
 
 1.Ordinal Encoder.
 2.Binary Encoder.
 3.One Hot Encoder.
-```
+
 ### Applying OrdinalEncoder in column- Ord_1:
 ![op](./5b.png)
 ![op](./5c.png)
@@ -144,15 +144,15 @@ Categorical-Column Encoding Methods : Methods to convert categorical data to num
 ![op](./5mm.png)
 ### Final DataSet after applying feature generation:
 ![op](./5m.png)
-```
-Feture Scaling  Techniques:
+
+### Feature Scaling  Techniques:
 
 1.Min-Max Scaler.
 2.Standard Scaler.
 3.Max Abs Scaler.
 4.Robust Scaler.
 
-```
+
 ### Feature Scaling - Min-Max Scaler Technique:
 ![op](./5n.png)
 ### Feature Scaling - Standard Scaler Technique:
