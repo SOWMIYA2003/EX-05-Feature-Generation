@@ -116,11 +116,11 @@ df9
 ### Feature Generation:
 
 Categorical-Column Encoding Methods : Methods to convert categorical data to numeric data.
-
+```
 1.Ordinal Encoder.
 2.Binary Encoder.
 3.One Hot Encoder.
-
+```
 ### Applying OrdinalEncoder in column- Ord_1:
 ![op](./5b.png)
 ![op](./5c.png)
