@@ -184,5 +184,10 @@ Feature scaling is a method used to normalize the range of independent variables
 ```
 ```
 ## OUTPUT
+# Data 3 - titanic_dataset.csv
+## CODE
+```
+```
+## OUTPUT
 ## RESULT:
 Feature Generation process and Feature Scaling process is applied to the given data frame sucessfully.
