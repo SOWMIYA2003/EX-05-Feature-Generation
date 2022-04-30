@@ -137,25 +137,25 @@ Categorical-Column Encoding Methods : Methods to convert categorical data to num
 2.Binary Encoder.
 3.One Hot Encoder.
 ```
-### Applying Ordinal Encoding in column- Ord_1:
+### Applying Ordinal Encoding Method in column- Ord_1:
 ![op](./5b.png)
 ![op](./5c.png)
-### After applying Ordinal Encoding in column- Ord_1:
+### After applying Ordinal Encoding Method in column- Ord_1:
 ![op](./5d.png)
-### Applying Ordinal Encoding in column- Ord_2:
+### Applying Ordinal Encoding Method in column- Ord_2:
 ![op](./5e.png)
 ![op](./5f.png)
-### After applying Ordinal Encoding in column- Ord_2:
+### After applying Ordinal Encoding Method in column- Ord_2:
 ![op](./5g.png)
-### Applying Binary Encoding in column- bin_1:
+### Applying Binary Encoding Method in column- bin_1:
 ![op](./5h.png)
 ### After applying Binary Encoding in column- bin_1:
 ![op](./5i.png)
-### Applying Binary Encoding in column- bin_2:
+### Applying Binary Encoding Method in column- bin_2:
 ![op](./5j.png)
-### After applying Binary Encoding in column- bin_2:
+### After applying Binary Encoding Method in column- bin_2:
 ![op](./5k.png)
-### One Hot Encoding:
+### One Hot Encoding Method:
 ![op](./5l.png)
 ![op](./5mm.png)
 ### Final DataSet after applying Encoding Methods:
