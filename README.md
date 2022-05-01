@@ -126,7 +126,7 @@ df9
 
 ```
 ## OUPUT
-### DataFrame (data.csv):
+### Initial DataFrame (data.csv):
 ![op](./5a.png)
 
 ### Feature Generation Process:
@@ -182,8 +182,108 @@ Feature scaling is a method used to normalize the range of independent variables
 # DataSet 2 - Encoding Data.csv
 ## CODE
 ```
+import pandas as pd
+df=pd.read_csv("Encoding Data.csv")
+df
+from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
+oe=OrdinalEncoder()
+oe.fit_transform(df[["ord_2"]])
+temp=['Cold','Warm','Hot']
+enc=OrdinalEncoder(categories=[temp])
+enc
+enc.fit_transform(df[['ord_2']])
+df1=df.copy()
+df1["ord_2"]=enc.fit_transform(df[["ord_2"]])
+df1
+oe1=OrdinalEncoder()
+oe.fit_transform(df[["nom_0"]])
+color=['Green','Blue','Red']
+enc1=OrdinalEncoder(categories=[color])
+enc1
+enc1.fit_transform(df[['nom_0']])
+df2=df1.copy()
+df2["nom_0"]=enc1.fit_transform(df[["nom_0"]])
+df2
+pip install category_encoders
+from category_encoders import BinaryEncoder
+be=BinaryEncoder()
+newdata=be.fit_transform(df2["bin_1"])
+newdata
+df3=df2.copy()
+df3["bin_1"]=be.fit_transform(df[["bin_1"]])
+df3
+be1=BinaryEncoder()
+newdata2=be1.fit_transform(df3['bin_2'])
+newdata2
+df4=df3.copy()
+df4["bin_2"]=be1.fit_transform(df[["bin_2"]])
+df4
+
+from sklearn.preprocessing import MinMaxScaler
+scaler=MinMaxScaler()
+df5=pd.DataFrame(scaler.fit_transform(df4),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+df5
+
+from sklearn.preprocessing import StandardScaler
+Stdscaler=StandardScaler()
+df6=pd.DataFrame(Stdscaler.fit_transform(df4),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+df6
+
+from sklearn.preprocessing import MaxAbsScaler
+maxabsscaler=MaxAbsScaler()
+df7=pd.DataFrame(maxabsscaler.fit_transform(df4),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+df7
+
+from sklearn.preprocessing import RobustScaler
+rscaler = RobustScaler()
+df8=pd.DataFrame(rscaler.fit_transform(df4),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+df8
 ```
 ## OUTPUT
+### Initial DataFrame (Encoding_data.csv)
+![op](./1a.png)
+### Feature Generation Process:
+```
+1.Ordinal Encoder.
+2.Binary Encoder.
+3.One Hot Encoder.
+```
+### Applying Ordinal Encoding Method in column - ord_2:
+![op](./1b.png)
+![op](./1c.png)
+### After applying Ordinal Encoding Method in column - ord_2:
+![op](./1d.png)
+### Applying Ordinal Encoding Method in column - nom_0:
+![op](./1e.png)
+![op](./1f.png)
+### After applying Ordinal Encoding Method in column - nom_0:
+![op](./1g.png)
+### Applying Binary Encoding Method in column - bin_1:
+![op](./1h.png)
+### After applying Binary Encoding in column- bin_1:
+![op](./1i.png)
+### Applying Binary Encoding Method in column - bin_2:
+![op](./1l.png)
+### After applying Binary Encoding in column- bin_2:
+![op](./1m.png)
+### Final DataSet after applying Encoding Methods:
+![op](./1aa.png)
+### Feature Scaling  Techniques:
+```
+1.Min-Max Scaler.
+2.Standard Scaler.
+3.Max Abs Scaler.
+4.Robust Scaler.
+```
+### Feature Scaling - Min-Max Scaler Technique:
+![op](./1n.png)
+### Feature Scaling - Standard Scaler Technique:
+![op](./1o.png)
+### Feature Scaling - Max Abs Scaler Technique:
+![op](./1p.png)
+### Feature Scaling - Robust Scaler Technique:
+![op](./1q.png)
+
 # DataSet 3 - titanic_dataset.csv
 ## CODE
 ```
