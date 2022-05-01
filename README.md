@@ -240,7 +240,7 @@ df8=pd.DataFrame(rscaler.fit_transform(df4),columns=['id', 'bin_1', 'bin_2', 'no
 df8
 ```
 ## OUTPUT
-### Initial DataFrame (Encoding_data.csv)
+### Initial DataFrame (Encoding Data.csv)
 ![op](./1a.png)
 ### Feature Generation Process:
 ```
@@ -287,7 +287,106 @@ df8
 # DataSet 3 - titanic_dataset.csv
 ## CODE
 ```
+import pandas as pd
+df=pd.read_csv("titanic_dataset.csv")
+df
+df.drop("Name",axis=1,inplace=True)
+df
+df.drop("Cabin",axis=1,inplace=True)
+df
+df.drop("Ticket",axis=1,inplace=True)
+df
+df.info()
+df.isnull().sum()
+df["Age"]=df["Age"].fillna(df["Age"].median())
+df["Embarked"]=df["Embarked"].fillna(df["Embarked"].mode()[0])
+df.boxplot()
+df.isnull().sum()
+df
+
+from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
+oe=OrdinalEncoder()
+oe.fit_transform(df[["Embarked"]])
+embark=['S','C','Q']
+enc=OrdinalEncoder(categories=[embark])
+enc
+enc.fit_transform(df[['Embarked']])
+df1=df.copy()
+df1["Embarked"]=enc.fit_transform(df[["Embarked"]])
+df1
+pip install category_encoders
+from category_encoders import BinaryEncoder
+be=BinaryEncoder()
+newdata=be.fit_transform(df1["Sex"])
+newdata
+df2=df1.copy()
+df2["Sex"]=be.fit_transform(df1[["Sex"]])
+df2
+
+from sklearn.preprocessing import MinMaxScaler
+scaler=MinMaxScaler()
+df3=pd.DataFrame(scaler.fit_transform(df2),columns=['Passenger','Survived','Pclass','Sex','Age','SibSp','Parch','Fare','Embarked'])
+df3
+
+from sklearn.preprocessing import StandardScaler
+Stdscaler=StandardScaler()
+df4=pd.DataFrame(Stdscaler.fit_transform(df2),columns=['Passenger','Survived','Pclass','Sex','Age','SibSp','Parch','Fare','Embarked'])
+df4
+
+from sklearn.preprocessing import MaxAbsScaler
+maxabsscaler=MaxAbsScaler()
+df5=pd.DataFrame(maxabsscaler.fit_transform(df2),columns=['Passenger','Survived','Pclass','Sex','Age','SibSp','Parch','Fare','Embarked'])
+df5
+
+from sklearn.preprocessing import RobustScaler
+rscaler = RobustScaler()
+df6=pd.DataFrame(rscaler.fit_transform(df2),columns=['Passenger','Survived','Pclass','Sex','Age','SibSp','Parch','Fare','Embarked'])
+df6
 ```
 ## OUTPUT
+### Initial DataFrame - (titanic_dataset.csv):
+![op](./2a.png)
+### Droping "Name" column from DataFrame:
+![op](./2b.png)
+### Droping "Cabin" and "Ticket" column from DataFrame:
+![op](./2c.png)
+### Non Null-data Count:
+![op](./2d.png)
+### Sum of null data present in each column:
+![op](./2e.png)
+### Handling Null data in Column "Age" and "Embarked" :
+![op](./0s.png)
+### Data Frame after removing column - Age,Cabin,Ticket:
+![op](./2h.png)
+### Feature Generation Process:
+```
+1.Ordinal Encoder.
+2.Binary Encoder.
+3.One Hot Encoder.
+```
+### Applying Ordinal Encoding Method in column - Embarked:
+![op](./2i.png)
+![op](./0sh.png)
+### After applying Ordinal Encoding Method in column - Embarked:
+![op](./0am.png)
+### Applying Binary Encoding Method in column - Sex:
+![op](./2j.png)
+### After applying Binary Encoding in column- Sex:
+![op](./2k.png)
+### Feature Scaling  Techniques:
+```
+1.Min-Max Scaler.
+2.Standard Scaler.
+3.Max Abs Scaler.
+4.Robust Scaler.
+```
+### Feature Scaling - Min-Max Scaler Technique:
+![op](./2s.png)
+### Feature Scaling - Standard Scaler Technique:
+![op](./2ha.png)
+### Feature Scaling - Max Abs Scaler Technique:
+![op](./2m.png)
+### Feature Scaling - Robust Scaler Technique:
+![op](./2ra.png)
 ## RESULT:
 Feature Generation process and Feature Scaling process is applied to the given data frame sucessfully.
