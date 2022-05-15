@@ -240,7 +240,7 @@ df8=pd.DataFrame(rscaler.fit_transform(df4),columns=['id', 'bin_1', 'bin_2', 'no
 df8
 ```
 ## OUTPUT
-### Initial DataFrame (Encoding Data.csv)
+### Initial DataFrame (Encoding Data.csv):
 ![op](./1a.png)
 ### Feature Generation Process:
 ```
@@ -356,7 +356,7 @@ df6
 ![op](./2e.png)
 ### Handling Null data in Column "Age" and "Embarked" :
 ![op](./0s.png)
-### Data Frame after removing column - Age,Cabin,Ticket:
+### Data Frame after removing column - Name,Cabin,Ticket:
 ![op](./2h.png)
 ### Feature Generation Process:
 ```
